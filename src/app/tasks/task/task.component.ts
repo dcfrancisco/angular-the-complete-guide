@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CardComponent } from '../../shared/card/card.component';
 import { Task } from './task.model';
 
 @Component({
@@ -6,6 +7,7 @@ import { Task } from './task.model';
   standalone: true,
   templateUrl: './task.component.html',
   styleUrl: './task.component.css',
+  imports: [CardComponent],
 })
 export class TaskComponent {
   @Input({ required: true }) task!: Task;
